@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.Gravity
 import android.view.Menu
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.Navigation
@@ -74,6 +75,8 @@ class HomeActivity : AppCompatActivity(), UserDetailsFragment.UserDetailsInterfa
         editor.apply()
 
         setHeaderNames(username,email)
+
+        Toast.makeText(this,username,Toast.LENGTH_SHORT).show()
     }
 
     override fun gotoQuotes() {
